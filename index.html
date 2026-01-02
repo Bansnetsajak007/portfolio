@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sajak Basnet - AI Researcher & Engineer</title>
+<style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 0 15px;
+            line-height: 1.7;
+            text-align: left;
+            font-size: 16px;
+        }
+        a {
+            color: blue;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: left;
+        }
+        td {
+            padding: 5px 15px 5px 0;
+            vertical-align: top;
+        }
+        td:first-child {
+            font-style: italic;
+        }
+        h1 {
+            margin: 15px 0;
+        }
+        h2 {
+            margin: 20px 0 10px 0;
+        }
+        p {
+            margin: 10px 0;
+        }
+        nav {
+            margin: 10px 0;
+        }
+</style>
+</head>
+<body>
+<nav>
+<a href="#/">home</a> / 
+<a href="#/blog">blog</a> / 
+<a href="#/projects">projects</a> /
+</nav>
+ 
+    <div id="content">
+<div id="home">
+<h1>Hi! I'm Sajak Basnet</h1>
+<p>
+        AI Researcher & ML Engineer<br>
+        Deep Learning • Generative AI • Research
+</p>
+ 
+    <p>Machine learning researcher focused on understanding and advancing neural networks through rigorous experimentation and implementation.</p>
+ 
+    <p>Currently immersed in reading research papers, implementing state-of-the-art architectures, and optimizing neural networks from first principles.</p>
+ 
+    <p>My work spans deep learning fundamentals, generative models, and exploring novel approaches to make AI systems more efficient and capable.</p>
+ 
+    <p>Got something to discuss about? <a href="mailto:contact@sajakbasnet.com">contact@sajakbasnet.com</a></p>
+ 
+    <h2>my tech stack</h2>
+ 
+    <table>
+<tr>
+<td>deep learning</td>
+<td>PyTorch, TensorFlow, JAX, Hugging Face Transformers</td>
+</tr>
+<tr>
+<td>generative ai</td>
+<td>Stable Diffusion, GPT models, VAEs, GANs, Diffusion Models</td>
+</tr>
+<tr>
+<td>research tools</td>
+<td>Jupyter, Weights & Biases, TensorBoard, MLflow</td>
+</tr>
+<tr>
+<td>infrastructure</td>
+<td>CUDA, Docker, AWS/GCP, Kubernetes</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>Neural Architecture Design, Model Training & Fine-tuning, Research Paper Implementation, Performance Optimization, Experimental Design, Technical Writing</td>
+</tr>
+</table>
+ 
+    <p><strong>▼ let's connect</strong></p>
+<p>
+<a href="https://www.linkedin.com/in/sajak-basnet-7b2792353/">linkedin</a> / 
+<a href="https://github.com/Bansnetsajak007">github</a> / 
+<a href="https://twitter.com">twitter</a> /
+</p>
+</div>
+ 
+        <div id="blog" class="hidden">
+<h1>blog</h1>
+<p>Currently crafting thoughtful pieces on machine learning research, neural network architectures, and the beautiful mathematics behind AI.</p>
+<p>Articles coming soon. Stay tuned.</p>
+<p><a href="#/">← back to home</a></p>
+</div>
+ 
+        <div id="projects" class="hidden">
+<h1>projects</h1>
+<p>Building and experimenting with neural networks, implementing research papers, and exploring the boundaries of what's possible with deep learning.</p>
+<p>Project showcases will be updated soon.</p>
+<p><a href="#/">← back to home</a></p>
+</div>
+</div>
+ 
+    <script>
+        const pages = {
+            '/': document.getElementById('home'),
+            '/blog': document.getElementById('blog'),
+            '/projects': document.getElementById('projects')
+        };
+ 
+        function showPage(path) {
+            Object.values(pages).forEach(page => page.classList.add('hidden'));
+            if (pages[path]) {
+                pages[path].classList.remove('hidden');
+            }
+        }
+ 
+        function handleRoute() {
+            const hash = window.location.hash.substring(1) || '/';
+            showPage(hash);
+        }
+ 
+        window.addEventListener('hashchange', handleRoute);
+        window.addEventListener('load', handleRoute);
+</script>
+</body>
+</html>
